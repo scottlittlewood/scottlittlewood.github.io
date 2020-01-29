@@ -19,11 +19,29 @@
   <meta name="theme-color" content="#ffffff">
   <!-- favicon -- END -->
 
+  <style>
+    @media all and (display-mode: standalone) {
+      body {
+        background-color: yellow;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <h1>Background</h1>
   <p>Welcome to my site</p>
+
+  <script>
+    let deferredPrompt;
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Stash the event so it can be triggered later.
+      deferredPrompt = e;
+      // Update UI notify the user they can add to home screen
+      showInstallPromotion();
+    });
+  </script>
 </body>
 
 </html>

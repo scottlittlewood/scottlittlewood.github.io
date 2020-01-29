@@ -1,7 +1,7 @@
 {
     "name": "Scott Littlewood",
     "short_name": "Scott Littlewood",
-	"description": "Online presence of Scott Littlewood",
+    "description": "Online presence of Scott Littlewood",
     "icons": [
         {
             "src": "/assets/favicons/android-chrome-192x192.png",
@@ -11,5 +11,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/index.html",
 }
