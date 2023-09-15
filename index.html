@@ -46,6 +46,24 @@
       // Optionally, send analytics event that PWA install promo was shown.
       console.log(`'beforeinstallprompt' event was fired.`);
     });
+
+    window.addEventListener('appinstalled', () => {
+      // Hide the app-provided install promotion
+      hideInstallPromotion();
+      // Clear the deferredPrompt so it can be garbage collected
+      deferredPrompt = null;
+      // Optionally, send analytics event to indicate successful install
+      console.log('PWA was installed');
+    });
+
+    window.matchMedia('(display-mode: standalone)').addEventListener('change', (evt) => {
+      let displayMode = 'browser';
+      if (evt.matches) {
+        displayMode = 'standalone';
+      }
+      // Log display mode change to analytics
+      console.log('DISPLAY_MODE_CHANGED', displayMode);
+    });
   </script>
 </body>
 
