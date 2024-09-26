@@ -20,6 +20,7 @@
   <!-- favicon -- END -->
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
     @media all and (display-mode: standalone) {
       body {
         background-color: yellow;
@@ -28,10 +29,20 @@
     body {
       background-color: dodgerblue;
     }
+    // <uniquifier>: Use a unique and descriptive class name
+   // <weight>: Use a value from 300 to 800
+
+   .open-sans-500 {
+     font-family: "Open Sans", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 500;
+     font-style: normal;
+     font-variation-settings: "wdth" 100;
+   }
   </style>
 </head>
 
-<body>
+<body class="open-sans-500">
   <h1>Scott Littlewood</h1>
   <p>Welcome to my site</p>
 
